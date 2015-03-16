@@ -12,21 +12,31 @@
   <% end %>
 
   <div class="field">
+    <span>Enter your word, phrase, or action.</span><br>
     <%= f.label :word %><br>
     <%= f.text_area :word %>
   </div>
   <div class="field">
+    <span>Enter the type of word, phrase or action. Ie. noun, verb, funny, angry, etc...</span><br>
+    <%= f.label :word_type %><br>
+    <%= f.text_area :word_type %>
+  </div>
+  <div class="field">
+    <span>Enter a brief definition for the word or phrase or a description of the action.</span><br>
     <%= f.label :definition %><br>
     <%= f.text_field :definition %>
   </div>
   <div class="field">
-    <%= f.label :text %><br>
-    <%= f.text_field :text %>
-  </div>
-  <div class="field">
+    <span>Enter the origin or a memorable event you think would help convey the appropriate response.</span><br>
     <%= f.label :origin %><br>
     <%= f.text_area :origin %>
   </div>
+  <div>
+    <span>Enter an example of your word, phrase, or action in a sentence.</span><br>
+    <%= f.label :example %><br>
+    <%= f.text_area :example %>
+  </div>
+  <span>Enter your name for credit or leave blank if you want to remain anonymous.</span><br>
   <div class="field">
     <%= f.label :author %><br>
     <%= f.text_area :author %>
