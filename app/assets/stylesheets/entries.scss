@@ -1,3 +1,67 @@
 // Place all the styles related to the Entries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.dictionary{
+ width:100%;
+ height:auto;
+ border-top:#000 solid 7px;
+ margin-top:61px;
+ float:left;
+}
+.reference-letter{
+ font-family:Arial Black;
+ font-size:37px;
+ float:left;
+}
+.words{
+ width:95%;
+ height:auto;
+ float:right;
+}
+.entry{
+ font-family:Arial;
+ font-size:16px;
+ border-bottom: 1px solid #000;
+}
+.word{
+ padding: 0 0 7px 0;
+ margin-top:21px;
+ font-weight:bold;
+}
+.word::first-letter{
+  color: #903; 
+  font-size: 21px; 
+  line-height: 21px; 
+  padding 4px 8px 0px 3px; 
+  font-family: Georgia;
+}
+.word-type:before{
+ content:" \2022  ";
+ font-weight:bolder;
+}
+.definition{
+ padding: 0 0 0 10px;
+ margin-top:5px;
+}
+.example{
+ padding: 0 0 0 10px;
+ margin-top:5px;
+ font-style:italic;
+}
+.example:before{
+  content:"\""
+}
+.example:after{
+  content:"\""
+}
+.credit{
+ padding: 0 0 0 10px;
+ margin-top:5px;
+}
+.author{
+ padding: 0 0 0 10px;
+ margin-top:5px;
+}
+.author:before{
+  content:"-"
+}
