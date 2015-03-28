@@ -2,32 +2,23 @@
 
 <h1>Listing Entries</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Word</th>
-      <th>Word Type</th>
-      <th>Definition</th>
-      <th>Origin</th>
-      <th>Example</th>
-      <th>Author</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @entries.each do |entry| %>
-      <tr>
-        <td><%= entry.word %></td>
-        <td><%= entry.word_type %></td>
-        <td><%= entry.definition %></td>
-        <td><%= entry.origin %></td>
-        <td><%= entry.example %></td>
-        <td><%= entry.author %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Entry', new_entry_path %>
+<div class="btn btn-primary" style="float:right; margin-right:2em;"><%= link_to 'New Entry', new_entry_path %></div>
+<div class="dictionary">
+  <div class="words">
+    <div class="entry">
+      <% @entries.each do |entry| %>
+      <div class="actions">
+        <a class="action"><%= link_to 'Show', entry %></a>
+        <a class="action"><%= link_to 'Edit', edit_entry_path(entry) %></a>
+        <a class="action"><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+      </div>
+      <div class="word"><%= entry.word %><span class="word-type"><%=entry.word_type %></span></div>
+      <div class="definition"><%= entry.definition %></div>
+      <div class="example"><%= entry.example %></div>
+      <div class="credit"><%= entry.origin %></div>
+      <div class="author"><%= entry.author %></div>
+      <% end %>
+    </div>
+    <!--<p class="reference-letter">a</p> -->
+  </div>
+</div>
