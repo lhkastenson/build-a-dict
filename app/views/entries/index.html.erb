@@ -2,6 +2,25 @@
 
 <h1>Listing Entries</h1>
 
+<div class="dictionary">
+  <div class="words">
+    <div class="entry">
+      <% @entries.each do |entry| %>
+      <div class="word"><%= entry.word %><span class="word-type"><%=entry.word_type %></span></div>
+      <div class="actions">
+        <a class="action"><%= link_to 'Show', entry %></a>
+        <a class="action"><%= link_to 'Edit', edit_entry_path(entry) %></a>
+        <a class="action"><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+      </div>
+      <div class="definition"><%= entry.definition %></div>
+      <div class="example"><%= entry.example %></div>
+      <div class="credit"><%= entry.origin %></div>
+      <div class="author"><%= entry.author %></div>
+    </div>
+    <!--<p class="reference-letter">a</p> -->
+  </div>
+</div>
+
 <table>
   <thead>
     <tr>
