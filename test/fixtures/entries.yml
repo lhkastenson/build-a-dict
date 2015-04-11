@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  word: MyText
-  definition: MyString
-  text: MyString
-  origin: MyText
-  author: MyText
+  word: Example word
+  definition: Example defintion
+  origin: Example origin
+  author: Example author
+  example: Example example
+  word_type: Example word_type
 
 two:
-  word: MyText
-  definition: MyString
-  text: MyString
-  origin: MyText
-  author: MyText
+  word: Example word 2
+  definition: Example defintion 2
+  origin: Example origin 2
+  author: Example author 2
+  example: Example example 2
+  word_type: Example word_type 2
